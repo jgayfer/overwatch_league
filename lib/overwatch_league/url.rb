@@ -2,7 +2,7 @@ require 'net/http'
 
 module OverwatchLeague
   class URL
-    def initialize(path:, params: {})
+    def initialize(path, params: {})
       @path = path
       @params = params
     end
