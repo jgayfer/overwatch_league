@@ -4,7 +4,7 @@ module OverwatchLeague
   module Request
     class << self
       def get(url)
-        HTTP.get(url.to_str).to_s
+        HTTP.get(url.to_str)
       end
     end
   end
