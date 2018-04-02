@@ -1,4 +1,5 @@
 [![Gem Version](https://badge.fury.io/rb/overwatch_league.svg)](https://badge.fury.io/rb/overwatch_league)
+[![Build Status](https://travis-ci.org/jgayfer/overwatch_league.svg?branch=master)](https://travis-ci.org/jgayfer/overwatch_league)
 
 # Overwatch League
 
