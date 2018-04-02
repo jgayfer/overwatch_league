@@ -1,11 +1,12 @@
 RSpec.describe OverwatchLeague::API do
   let(:ok) { 200 }
   let(:not_found) { 404 }
+  let(:client) { OverwatchLeague::Client.new }
 
   describe '.teams' do
     let(:response_body) { '{"endpoint": "teams"}' }
 
-    subject { described_class.teams }
+    subject { client.teams }
 
     before do
       stub_request(:any, /api.overwatchleague.com\/teams/).
@@ -32,7 +33,7 @@ RSpec.describe OverwatchLeague::API do
     let(:team_id) { '123' }
     let(:response_body) { '{"endpoint": "specific_team"}' }
 
-    subject { described_class.team(team_id) }
+    subject { client.team(team_id) }
 
     before do
       stub_request(:any, /api.overwatchleague.com\/teams\/#{team_id}/).
@@ -58,7 +59,7 @@ RSpec.describe OverwatchLeague::API do
   describe '.ranking' do
     let(:response_body) { '{"endpoint": "ranking"}' }
 
-    subject { described_class.ranking }
+    subject { client.ranking }
 
     before do
       stub_request(:any, /api.overwatchleague.com\/ranking/).
@@ -84,7 +85,7 @@ RSpec.describe OverwatchLeague::API do
   describe '.standings' do
     let(:response_body) { '{"endpoint": "standings"}' }
 
-    subject { described_class.standings }
+    subject { client.standings }
 
     before do
       stub_request(:any, /api.overwatchleague.com\/standings/).
@@ -110,7 +111,7 @@ RSpec.describe OverwatchLeague::API do
   describe '.matches' do
     let(:response_body) { '{"endpoint": "matches"}' }
 
-    subject { described_class.matches }
+    subject { client.matches }
 
     before do
       stub_request(:any, /api.overwatchleague.com\/matches/).
@@ -137,7 +138,7 @@ RSpec.describe OverwatchLeague::API do
     let(:match_id) { '123' }
     let(:response_body) { '{"endpoint": "specific_match"}' }
 
-    subject { described_class.match(match_id) }
+    subject { client.match(match_id) }
 
     before do
       stub_request(:any, /api.overwatchleague.com\/matches\/#{match_id}/).
@@ -163,7 +164,7 @@ RSpec.describe OverwatchLeague::API do
   describe '.schedule' do
     let(:response_body) { '{"endpoint": "schedule"}' }
 
-    subject { described_class.schedule }
+    subject { client.schedule }
 
     before do
       stub_request(:any, /api.overwatchleague.com\/schedule/).
@@ -189,7 +190,7 @@ RSpec.describe OverwatchLeague::API do
   describe '.streams' do
     let(:response_body) { '{"endpoint": "streams"}' }
 
-    subject { described_class.streams }
+    subject { client.streams }
 
     before do
       stub_request(:any, /api.overwatchleague.com\/streams/).
@@ -215,7 +216,7 @@ RSpec.describe OverwatchLeague::API do
   describe '.vods' do
     let(:response_body) { '{"endpoint": "vods"}' }
 
-    subject { described_class.vods }
+    subject { client.vods }
 
     before do
       stub_request(:any, /api.overwatchleague.com\/vods/).
@@ -241,7 +242,7 @@ RSpec.describe OverwatchLeague::API do
   describe '.maps' do
     let(:response_body) { '{"endpoint": "maps"}' }
 
-    subject { described_class.maps }
+    subject { client.maps }
 
     before do
       stub_request(:any, /api.overwatchleague.com\/maps/).
@@ -267,7 +268,7 @@ RSpec.describe OverwatchLeague::API do
   describe '.news' do
     let(:response_body) { '{"endpoint": "news"}' }
 
-    subject { described_class.news }
+    subject { client.news }
 
     before do
       stub_request(:any, /api.overwatchleague.com\/news/).
@@ -293,7 +294,7 @@ RSpec.describe OverwatchLeague::API do
   describe '.videos' do
     let(:response_body) { '{"endpoint": "videos"}' }
 
-    subject { described_class.videos }
+    subject { client.videos }
 
     before do
       stub_request(:any, /api.overwatchleague.com\/playlist\/owl-app-playlist/).
