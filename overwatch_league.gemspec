@@ -9,15 +9,15 @@ Gem::Specification.new do |spec|
   spec.authors       = ["James Gayfer"]
   spec.email         = ["gayfer.james@gmail.com"]
 
-  spec.summary       = 'Ruby wrapper for the OWL API'
-  spec.description   = 'Ruby wrapper for the OWL API'
+  spec.summary       = 'Ruby wrapper for the Overwatch League API'
+  spec.description   = 'Ruby wrapper for the Overwatch League API'
   spec.homepage      = 'http://www.github.com/jgayfer/overwatch_league'
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
+    spec.metadata['allowed_push_host'] = 'https://rubygems.org'
   else
     raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
   end
