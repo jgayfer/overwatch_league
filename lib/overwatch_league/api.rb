@@ -1,5 +1,6 @@
 require_relative 'request'
 require_relative 'response_error'
+require_relative 'build_response'
 
 module OverwatchLeague
   module API
@@ -58,7 +59,7 @@ module OverwatchLeague
 
     def handle_response(response)
       raise ResponseError.new(response) unless response.code == HTTP_OK
-      JSON.parse(response.body.to_s, object_class: OpenStruct)
+      BuildResponse.(response)
     end
   end
 end
