@@ -1,5 +1,7 @@
 [![Gem Version](https://badge.fury.io/rb/overwatch_league.svg)](https://badge.fury.io/rb/overwatch_league)
 [![Build Status](https://travis-ci.org/jgayfer/overwatch_league.svg?branch=master)](https://travis-ci.org/jgayfer/overwatch_league)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/398b860d65874c9ea715/test_coverage)](https://codeclimate.com/github/jgayfer/overwatch_league/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/398b860d65874c9ea715/maintainability)](https://codeclimate.com/github/jgayfer/overwatch_league/maintainability)
 
 # Overwatch League
 
