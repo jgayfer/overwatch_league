@@ -37,6 +37,8 @@ The following methods are supported as part of the basic client.
 
 > `match(match_id)`
 
+> `live_match` 
+
 > `schedule`
 
 > `streams`
