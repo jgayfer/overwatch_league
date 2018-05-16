@@ -161,6 +161,32 @@ RSpec.describe OverwatchLeague::API do
     end
   end
 
+  describe '.live-match' do
+    let(:response_body) { '{"endpoint": "live_match"}' }
+
+    subject { client.live_match }
+
+    before do
+      stub_request(:any, /api.overwatchleague.com\/live-match/).
+        to_return(status: ok, body: response_body)
+    end
+
+    it 'is the endpoint for a live match' do
+      expect(subject.endpoint).to eq 'live_match'
+    end
+
+    context 'when the response is not OK' do
+      before do
+        stub_request(:any, /api.overwatchleague.com\/live-match/).
+          to_return(status: not_found)
+      end
+
+      it 'raises an error' do
+        expect { subject }.to raise_error(OverwatchLeague::ResponseError)
+      end
+    end
+  end
+
   describe '.schedule' do
     let(:response_body) { '{"endpoint": "schedule"}' }
 

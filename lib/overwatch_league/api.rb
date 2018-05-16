@@ -31,6 +31,10 @@ module OverwatchLeague
       handle_response(Request.get(URL.new("#{BASE_URL}/matches/#{match_id}")))
     end
 
+    def live_match
+      handle_response(Request.get(URL.new("#{BASE_URL}/live-match")))
+    end
+
     def schedule
       handle_response(Request.get(URL.new("#{BASE_URL}/schedule")))
     end
